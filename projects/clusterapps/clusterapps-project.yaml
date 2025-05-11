@@ -1,0 +1,15 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: clusterapps
+  namespace: argocd
+spec:
+  description: Shared infrastructure apps
+  sourceRepos:
+    - '*'  # Or restrict to your Git repo
+  destinations:
+    - namespace: monitoring
+      server: https://kubernetes.default.svc
+  clusterResourceWhitelist:
+    - group: '*'
+      kind: '*'
