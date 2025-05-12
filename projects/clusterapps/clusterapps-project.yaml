@@ -8,7 +8,7 @@ spec:
   sourceRepos:
     - '*'  # Or restrict to your Git repo
   destinations:
-    - namespace: monitoring
+    - namespace: clusterapps
       server: https://kubernetes.default.svc
   clusterResourceWhitelist:
     - group: '*'
