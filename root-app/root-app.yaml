@@ -4,11 +4,11 @@ metadata:
   name: root-app
   namespace: argocd
 spec:
-  project: default
+  project: root-app
   source:
     repoURL: https://github.com/Ajay0696/Cluster-Addons-Argo-CD.git
     targetRevision: HEAD
-    path: clusterapps  # This is where your child app yamls live
+    path: Projects  # This is where your child app yamls live
     directory:
       recurse: true
   destination:
